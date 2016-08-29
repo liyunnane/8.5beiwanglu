@@ -1,0 +1,216 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font-family: "微软雅黑";
+  position: relative;
+}
+
+body {
+  background: #d25479;
+}
+
+@font-face {
+  font-family: 'iconfont';
+  src: url("../font/iconfont.eot");
+  /* IE9*/
+  src: url("../font/iconfont.eot?#iefix") format("embedded-opentype"), url("../font/iconfont.woff") format("woff"), url("../font/iconfont.ttf") format("truetype"), url("../font/iconfont.svg#iconfont") format("svg");
+  /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: 'iconfont';
+}
+
+.da {
+  width: 500px;
+  height: 500px;
+  background: red;
+  margin-left: 200px;
+  margin-top: -100px;
+}
+
+.da .xiao {
+  width: 50px;
+  height: 50px;
+  background: green;
+  margin: 20px;
+  float: left;
+}
+
+.add {
+  width: 100px;
+  height: 100px;
+  font-size: 100px;
+  line-height: 100px;
+}
+
+.todo {
+  margin: 0 auto;
+}
+
+.todo h1 {
+  text-align: center;
+}
+
+.todo .yanse {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 5px;
+  right: 45px;
+  font-size: 30px;
+  color: rebeccapurple;
+  cursor: pointer;
+}
+
+.todo .todo-content {
+  width: 100%;
+  height: 414px;
+}
+
+.todo .todo-content .header {
+  background: #fff;
+  margin: 0 auto;
+  width: 100%;
+  height: 40px;
+  padding-left: 6.5%;
+  box-sizing: border-box;
+  border: 1px solid #666;
+}
+
+.todo .todo-content .header input {
+  width: 100%;
+  height: 100%;
+  outline: none;
+  border: none;
+  font-size: 18px;
+}
+
+.todo .todo-content #zhuangtai {
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+}
+
+.todo .todo-content #zhuangtai span {
+  display: inline-block;
+  height: 40px;
+  margin-right: 20px;
+  vertical-align: top;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.todo .todo-content .single, .todo .todo-content .zhuangtai {
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
+}
+
+.todo .todo-content .single li, .todo .todo-content .zhuangtai li {
+  background: #fff;
+  border: 1px solid #666;
+  border-top: none;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.todo .todo-content .single li .check, .todo .todo-content .zhuangtai li .check {
+  cursor: pointer;
+  width: 5%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: center;
+  font-size: 30px;
+  line-height: 40px;
+}
+
+.todo .todo-content .single li p, .todo .todo-content .zhuangtai li p {
+  box-sizing: border-box;
+  width: 90%;
+  height: 100%;
+  position: absolute;
+  left: 5%;
+  top: 0;
+  padding-top: 0.56%;
+  padding-left: 20px;
+}
+
+.todo .todo-content .single li .delete, .todo .todo-content .zhuangtai li .delete {
+  width: 3%;
+  height: 20px;
+  position: absolute;
+  top: 10px;
+  right: 2.5%;
+  text-align: center;
+  cursor: pointer;
+}
+
+.todo .todo-content .single li input, .todo .todo-content .zhuangtai li input {
+  display: none;
+  width: 90%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 6%;
+  border: none;
+  outline: none;
+}
+
+.todo .todo-content .single li.end .check, .todo .todo-content .zhuangtai li.end .check {
+  background: #000;
+}
+
+.todo .todo-content .single li.end p, .todo .todo-content .zhuangtai li.end p {
+  color: #ccc;
+  text-decoration: line-through;
+}
+
+.todo .todo-content .single li.editor .check, .todo .todo-content .zhuangtai li.editor .check {
+  display: none;
+}
+
+.todo .todo-content .single li.editor input, .todo .todo-content .zhuangtai li.editor input {
+  display: block;
+}
+
+.todo .todo-content .single li.editor p, .todo .todo-content .zhuangtai li.editor p {
+  display: none;
+}
+
+.todo .todo-content .single li.editor .delete, .todo .todo-content .zhuangtai li.editor .delete {
+  display: none;
+}
+
+.active {
+  background: #afa41a;
+}
+
+.single li {
+  transition: all 0.8s ease;
+  height: 40px;
+  font-size: 20px;
+}
+
+.single li.ng-enter {
+  transform: translateX(100%);
+}
+
+.single li.ng-enter-active {
+  transform: translateX(0);
+}
+
+.single li.ng-leave {
+  height: 40px;
+  transition: all .8s ease;
+}
+
+.single li.ng-leave-active {
+  height: 0;
+  transition: all .8s ease;
+}

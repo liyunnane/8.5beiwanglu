@@ -1,0 +1,194 @@
+*{
+  padding:0;
+  margin:0;
+  list-style: none;
+  font-family:"微软雅黑";
+  position: relative;
+}
+body{
+  background: #d25479;
+}
+@font-face {
+  font-family: 'iconfont';
+  src: url('../font/iconfont.eot'); /* IE9*/
+  src: url('../font/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('../font/iconfont.woff') format('woff'), /* chrome、firefox */
+  url('../font/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('../font/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+.iconfont{
+  font-family: 'iconfont';
+}
+.da{
+  width:500px;
+  height:500px;
+  background:red;
+  margin-left:200px;
+  margin-top:-100px;
+  .xiao{
+    width:50px;
+    height:50px;
+    background: green;
+    margin:20px;
+    float: left;
+  }
+}
+.add{
+  width:100px;
+  height:100px;
+  font-size:100px;
+  line-height: 100px;
+}
+
+
+
+
+
+.todo{
+  margin:0 auto;
+  h1{
+      text-align : center;
+    }
+  .yanse{
+    display: inline-block;
+    width:20px;
+    height:20px;
+    position: absolute;
+    top:5px;
+    right:45px;
+    font-size: 30px;
+    color: rebeccapurple;
+    cursor: pointer;
+  }
+  .todo-content{
+    width:100%;
+    height:414px;
+   .header{
+     background: #fff;
+     margin:0 auto;
+     width:100%;
+     height:40px;
+     padding-left:6.5%;
+     box-sizing: border-box;
+     border:1px solid #666;
+     input{
+       width:100%;
+       height:100%;
+       outline: none;
+       border:none;
+       font-size:18px;
+     }
+   }
+    #zhuangtai{
+      height:40px;
+      line-height: 40px;
+      text-align: center;
+      span{
+        display: inline-block;
+        height:40px;
+        margin-right:20px;
+        vertical-align: top;
+        cursor: pointer;
+        border-radius: 10px;
+      }
+    }
+    .single,.zhuangtai{
+      margin:0 auto;
+      width:100%;
+      height:auto;
+      li{
+        background: #fff;
+        border:1px solid #666;
+        border-top:none;
+        box-sizing: border-box;
+        width:100%;
+        .check{
+          cursor: pointer;
+          width:5%;
+          height:100%;
+          position: absolute;
+          top:0;
+          left:0;
+          text-align: center;
+          font-size: 30px;
+          line-height: 40px;
+        }
+         p{
+          box-sizing: border-box;
+          width:90%;
+          height:100%;
+          position: absolute;
+           left:5%;
+           top:0;
+           padding-top:0.56%;
+           padding-left:20px;
+        }
+        .delete{
+          width:3%;
+          height:20px;
+          position: absolute;
+          top:10px;
+          right:2.5%;
+          text-align: center;
+          cursor: pointer;
+        }
+        input{
+          display:none;
+          width:90%;
+          height:100%;
+          position: absolute;
+          top:0;
+          left:6%;
+          border:none;
+          outline: none;
+        }
+      }
+      li.end{
+        .check{
+          background: #000;
+        }
+        p{
+          color:#ccc;
+          text-decoration: line-through;
+        }
+      }
+      li.editor{
+        .check{
+          display:none;
+           }
+        input{
+          display:block;
+        }
+          p{
+            display:none;
+          }
+          .delete{
+            display:none;
+          }
+        }
+      }
+    }
+  }
+.active{
+  background: #afa41a;
+}
+
+.single li{
+  transition:all 0.8s ease;
+  height:40px;
+  font-size: 20px;
+}
+.single li.ng-enter{
+  transform: translateX(100%);
+}
+.single li.ng-enter-active{
+  transform: translateX(0);
+}
+.single li.ng-leave{
+  height:40px;
+  transition:all .8s ease;
+}
+.single li.ng-leave-active{
+  height:0;
+  transition:all .8s ease;
+}
